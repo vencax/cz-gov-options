@@ -1,0 +1,28 @@
+{
+  "name": "cz-gov-options",
+  "version": "0.0.1",
+  "description": "backend part of municipality invoice register",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register test",
+    "start": "export NODE_ENV=production && node server.js",
+    "precommit": "npm test"
+  },
+  "keywords": [
+    "invoice",
+    "open",
+    "data"
+  ],
+  "repository": "https://github.com/vencax/invoice-register",
+  "author": "Vaclav Klecanda <vencax77@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "cors": "^2.8.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {}
+}
