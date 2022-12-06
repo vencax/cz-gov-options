@@ -1,3 +1,6 @@
-# CZ Gov Option provider
+# czgov-json-api
 
-Protoze CZ Gov sou kokoti :/
+
+## SETTINGS
+
+Pouze pomocí ENVIRONMENT VARIABLES, viz. [env.exaple](env.exaple)

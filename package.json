@@ -1,28 +1,38 @@
 {
-  "name": "cz-gov-options",
-  "version": "0.0.1",
-  "description": "backend part of municipality invoice register",
-  "main": "server.js",
+  "name": "czgov-json-api",
+  "version": "1.0.0",
+  "description": "JSON API pro informace ze statnich infosystemu",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register test",
-    "start": "export NODE_ENV=production && node server.js",
-    "precommit": "npm test"
+    "start": "node -r esm server.js",
+    "startdbg": "node -r esm --inspect-brk server.js",
+    "test": "mocha -r esm --exit './test/main.js'",
+    "testdbg": "mocha -r esm --exit --inspect './test/main.js'"
   },
-  "keywords": [
-    "invoice",
-    "open",
-    "data"
-  ],
-  "repository": "https://github.com/vencax/invoice-register",
-  "author": "Vaclav Klecanda <vencax77@gmail.com>",
+  "author": "Vaclav Klecanda <vencax77@gmail.com> (http://vxk.cz)",
   "license": "MIT",
+  "keywords": [ "invoice", "open", "data" ],
   "dependencies": {
-    "axios": "^0.16.1",
-    "cors": "^2.8.1",
-    "dotenv": "^2.0.0",
-    "express": "^4.14.0",
-    "lodash": "^4.17.4",
-    "xml2js": "^0.4.17"
+    "axios": "^0.24.0",
+    "esm": "^3.2.25",
+    "express": "^4.16.2",
+    "knex": "^2.3.0",
+    "knex-filter-loopback": "^0.3.0",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2",
+    "underscore": "^1.13.6",
+    "xml2js": "^0.4.23"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "expect": "^1.20.2",
+    "mocha": "^8.1.0",
+    "pg-mem": "^2.6.4",
+    "rimraf": "^3.0.2",
+    "temp": "^0.9.4"
+  },
+  "engines": {
+    "node": ">=12"
+  }
 }
